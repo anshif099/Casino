@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stake Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <div id="login-container">
+            <h1>Login</h1>
+            <input type="text" placeholder="Username" id="username" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <button onclick="login()">Login</button>
+            <button onclick="showRegister()">Register</button>
+        </div>
+
+        <div id="register-container" style="display: none;">
+            <h1>Register</h1>
+            <input type="text" placeholder="Username" id="register-username" required>
+            <input type="password" placeholder="Password" id="register-password" required>
+            <button onclick="register()">Register</button>
+            <button onclick="showLogin()">Back to Login</button>
+        </div>
+
+        <div id="main-content" style="display: none;">
+            <div id="top-nav">
+                <div id="balance-display">Balance: $0.00</div>
+                <button onclick="logout()">Logout</button>
+            </div>
+
+            <div id="deposit-container" style="display: none;">
+                <h2>Deposit</h2>
+                <input type="number" id="deposit-amount" placeholder="Amount" required>
+                <button onclick="deposit()">Deposit</button>
+                <button onclick="hideDeposit()">Cancel</button>
+            </div>
+
+            <div id="withdraw-container" style="display: none;">
+                <h2>Withdraw</h2>
+                <input type="number" id="withdraw-amount" placeholder="Amount" required>
+                <button onclick="withdraw()">Withdraw</button>
+                <button onclick="hideWithdraw()">Cancel</button>
+            </div>
+
+            <button class="action-button" onclick="showDeposit()">Deposit</button>
+            <button class="action-button" onclick="showWithdraw()">Withdraw</button>
+
+            <div class="form-container">
+                <h2>Mine Game</h2>
+                <input type="number" id="bet-amount-mine" placeholder="Bet Amount" required>
+                <input type="number" id="num-mines" placeholder="Number of Mines (1-25)" required>
+                <button class="action-button" onclick="startMineGame()">Start Mine Game</button>
+                <div id="mine-game-container" style="display: none;">
+                    <div id="mine-grid"></div>
+                    <button id="cash-out-button" class="action-button" onclick="cashOut()" style="display:none;">Cash Out</button>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <h2>Dice Game</h2>
+                <input type="number" id="bet-amount-dice" placeholder="Bet Amount" required>
+                <div class="bet-type">
+                    <label><input type="radio" name="bet-type" value="above" checked> Above 50</label>
+                    <label><input type="radio" name="bet-type" value="below"> Below 50</label>
+                </div>
+                <button class="action-button" onclick="startDiceGame()">Roll Dice</button>
+                <div id="dice-result"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

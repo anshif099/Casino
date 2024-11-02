@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    color: #007bff;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; 
+    width: 100%; /* Make buttons full-width */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+#mine-grid {
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px; 
+    margin: 20px auto; 
+    max-width: 220px; 
+}
+
+.cell {
+    width: 40px; 
+    height: 40px; 
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #cfd3d6;
+}
+
+.star {
+    background-color: #28a745; 
+}
+
+.mine {
+    background-color: #dc3545; 
+}
+
+.safe {
+    background-color: #17a2b8; 
+}
+
+.bet-type {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
